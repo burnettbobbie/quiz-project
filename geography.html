@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geography Quiz</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="JS/quiz.js"></script>
+</head>
+<body onload="DandT()">
+    <div data-role="page" data-title="Quiz" data-theme="a"id="geography">
+        <script>
+            //for loop displays geography questions from array on geography quiz page//
+            $(document).ready(function geogQs() {
+             for(let i=0; i <=2; i+=2 )
+         {
+             document.getElementById("gq1").innerHTML= qGeog[0][0];                
+             document.getElementById("gq2").innerHTML= qGeog[1][0];
+             document.getElementById("gq3").innerHTML= qGeog[2][0];
+             document.getElementById("gq4").innerHTML= qGeog[3][0];
+             document.getElementById("gq5").innerHTML= qGeog[4][0];
+         }
+     });
+
+         </script>
+        <div data-role="header" data-theme="a" id="header">
+            <div>
+                <h1><a href="mainmenu.html">QUIZ</a></h1>  <!--Quiz logo links back to main menu-->
+            </div>
+        </div>
+            
+        <div id="content" data-role="content" data-theme="c" class="container" onload="geogQs()">
+                 <div><br><br></div>
+            <!--Displays date and time-->
+            <div id="clock"></div>
+            <div class="loginTitle">
+                <div id="cornerSymbol"><img src="images/Geography.png" alt=""></div>
+                <h2>GEOGRAPHY</h2>
+            </div>  
+
+            <!--location of questions, answers and input boxes on page-->
+            <label for="" id="gq1" class="question"></label>
+            <input class="inputq" type="text" id="gAnsq1">
+            <label id="gq1result"></label>
+
+            <label for="" id="gq2" class="question" onmouseover="timeout()"></label>></label>
+            <input class="inputq" type="text" id="gAnsq2">
+            <label for="" id="gq2result"></label>
+
+            <label for="" id="gq3" class="question"></label>
+            <input class="inputq" type="text" id="gAnsq3">
+            <label id="gq3result"></label>
+
+            <label for="" id="gq4" class="question"></label>
+            <input class="inputq" type="text" id="gAnsq4">
+            <label id="gq4result"></label>
+
+            <label for="" id="gq5" class="question"></label>
+            <input class="inputq" type="text" id="gAnsq5">
+            <label id="gq5result"></label>
+            
+            <!--triggers function to check geography answers and display final score-->
+            <button class="submit" onclick="checkG()">SUBMIT ANSWERS</button>
+            <label for="score" id="score"></label>
+
+        </div>
+
+        <div data-role="footer" data-position="static" id="footer">
+            <div id="arrow"><a href="mainmenu.html"><img src="images/qarrow.png" alt="arrow"></a></div> <!--navigational arrow to go back to main menu-->
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Quiz</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="JS/quiz.js"></script>
+</head>
+<body onload="DandT()">
+    <div data-role="page" data-title="Quiz" data-theme="a"id="frontend">
+        <script>
+            //for loop displays history questions from array on history quiz page//
+            $(document).ready(function histQs() {
+             for(let i=0; i <=2; i+=2 )
+         {
+             document.getElementById("hq1").innerHTML= qHist[0][0];                
+             document.getElementById("hq2").innerHTML= qHist[1][0];
+             document.getElementById("hq3").innerHTML= qHist[2][0];
+             document.getElementById("hq4").innerHTML= qHist[3][0];
+             document.getElementById("hq5").innerHTML= qHist[4][0];
+         }
+     });
+
+
+         </script>
+        <div data-role="header" data-theme="a" id="header">
+            <div>
+                <h1><a href="mainmenu.html">QUIZ</a></h1>  <!--Quiz logo links back to main menu-->
+            </div>
+        </div>
+            
+        <div id="content" data-role="content" data-theme="c" class="container">
+    <div><br><br></div>
+        <!--Displays date and time-->
+         <div id="clock"></div>
+         <div class="loginTitle">
+            <div id="cornerSymbol"><img src="images/history.png" alt=""></div>
+            <h2>HISTORY           
+            </h2>
+         </div>  
+
+         <!--location of questions, answers and input boxes on page-->
+         <label for="" id="hq1" class="question"></label>
+         <input class="inputq" type="text" id="hAnsq1">
+         <label id="hq1result"></label>
+
+         <label for="" id="hq2" class="question" onmouseover="timeout()"></label>></label>
+         <input class="inputq" type="text" id="hAnsq2">
+         <label for="" id="hq2result"></label>
+
+         <label for="" id="hq3" class="question"></label>
+         <input class="inputq" type="text" id="hAnsq3">
+         <label id="hq3result"></label>
+
+         <label for="" id="hq4" class="question"></label>
+         <input class="inputq" type="text" id="hAnsq4">
+         <label id="hq4result"></label>
+
+         <label for="" id="hq5" class="question"></label>
+         <input class="inputq" type="text" id="hAnsq5">
+         <label id="hq5result"></label>
+         
+         <!--triggers function to check history answers and display final score-->
+         <button class="submit" onclick="checkH()">SUBMIT ANSWERS</button>
+         <label for="score" id="score"></label> 
+
+        </div>
+
+        <div data-role="footer" data-position="static" id="footer">
+            <div id="arrow"><a href="mainmenu.html"><img src="images/qarrow.png" alt="arrow"></a></div> <!--navigational arrow to go back to main menu-->
+        </div>
+    </div>
+    
+</body>
+</html>

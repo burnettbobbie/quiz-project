@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz login</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="JS/quiz.js"></script>
+    <!--NAME: Roberta Burnett
+        DATE: 06.04.22
+        CLASS: Client Side scripting/Developing Small Standalone Applications
+        TITLE: Quiz Project-->
+</head>
+<body onload="DandT()">
+    <div data-role="page" data-title="Quiz" data-theme="a"id="frontend">
+        <div data-role="header" data-theme="a" id="header">
+            <div>
+                <h1>QUIZ</h1>
+            </div>
+        </div>
+            
+        <div id="content" data-role="content" data-theme="c" class="container">
+            <div><br><br></div>
+            <div class="loginTitle">                    
+                <div id="dotpicRed"></div>
+                <div> <h2 id="det">-----ENTER DETAILS</h2> </div>
+            </div>
+          
+        
+            <form id="form">
+                <input id="username" type="text" name="username" placeholder="username..." required>
+                <input id="email" type="text" name="email" placeholder="email..." required>
+                <button id="submit" type="submit" name="submit" value="SUBMIT" onclick="setcookie('cname', 'cemail')">GO!</button>
+            </form>
+        
+        <span id="d" >
+            <p id="clock"> </p>
+        </span>       
+        </div>
+
+        <div data-role="footer" data-position="fixed" id="footer"></div>
+    </div>
+    
+</body>
+</html>

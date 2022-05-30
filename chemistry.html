@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemsitry QUIZ</title>
+    <link rel="stylesheet" href="s://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="JS/quiz.js"></script>
+</head>
+<body>
+<div data-role="page" data-title="Quiz" data-theme="a"id="frontend" onmouseover="DandT()">
+        <script>
+            //for loop displays chemistry questions from array on chemistry quiz page//
+            $(document).ready(function histQs() {
+             for(let i=0; i <=2; i+=2 )
+         {
+             document.getElementById("cq1").innerHTML= qChem[0][0];                
+             document.getElementById("cq2").innerHTML= qChem[1][0];
+             document.getElementById("cq3").innerHTML= qChem[2][0];
+             document.getElementById("cq4").innerHTML= qChem[3][0];
+             document.getElementById("cq5").innerHTML= qChem[4][0];
+         }
+     });
+         </script>
+    <div data-role="header" data-theme="a" id="header">
+            <div>
+                <h1><a href="mainmenu.html">QUIZ</a></h1>  <!--Quiz logo links back to main menu-->
+            </div> 
+    </div>
+            
+    <div id="content" data-role="content" data-theme="c" class="container">
+        <div><br><br></div>
+        <!--Displays date and time-->
+        <div id="clock"></div>
+         <div class="loginTitle">
+            <div id="cornerSymbol"><img src="images/Chemistry.png" alt=""></div>
+            <h2>CHEMISTRY </h2>
+         </div>  
+
+        <!--location of questions, answers and input boxes on page-->
+        <label for="" id="cq1" class="question"></label>
+        <div style="padding-left: 30%;">
+        <input class="radio" type="radio" name="ice" value="massShape" id="wrong">
+        <label for="massShape">The mass changes but the shape remains the same</label>
+        <input class="radio" type="radio" name="ice" value="intact" id="wrong">
+        <label for="intact">It remains intact</label>
+        <input class="radio" type="radio" name="ice" value="shapeMAss" id="cAnsq1">
+        <label for="shapeMass">The shape changes but the mass remains the same</label>
+        <input class="radio" type="radio" name="ice" value="dissolved" id="wrong">
+        <label for="dissolved">It gets dissolved</label>
+        </div>
+        <label id="cq1result"></label> 
+
+        <label for="" id="cq2" class="question" onmouseover="timeout()"></label>
+        <div style="padding-left:30%;">
+        <!--Radio checkboxes-->  
+        <input class="radio" type="radio" name="solution" value="element" id="wrong">
+        <label for="element">Element</label>
+        <input class="radio" type="radio" name="solution" value="mixture" id="cAnsq2">
+        <label for="mixture">Mixture</label>
+        <input class="radio" type="radio" name="solution" value="compound" id="wrong">
+        <label for="compound">Compound</label>
+        </div>
+        <label for="" id="cq2result"></label>
+
+        <label for="" id="cq3" class="question"></label>
+        <input class="inputq" type="text" id="cAnsq3">
+        <label id="cq3result"></label>
+
+        <label for="" id="cq4" class="question"></label>
+        <div style="padding-left: 30%;">
+        <input class="radio" type="radio" name="wasp" value="true"  id="wrong">
+        <label for="true">True</label>
+        <input class="radio" type="radio" name="wasp" value="false" id="cAnsq4">
+        <label for="false">False</label>
+        </div>
+        <label id="cq4result"></label>
+
+        <label for="" id="cq5" class="question"></label>
+        <input class="inputq" type="text" id="cAnsq5">
+        <label id="cq5result"></label>
+
+              
+         <!--triggers function to check chemsitry answers and display final score-->
+         <button class="submit" onclick="checkC();">SUBMIT ANSWERS</button> 
+         <label for="score" id="score"></label>
+         
+         
+    </div>
+
+    <div data-role="footer" data-position="static" id="footer">
+        <div id="arrow"><a href="mainmenu.html"><img src="images/qarrow.png" alt="arrow"></a></div> <!--navigational arrow to go back to main menu-->
+    </div>
+</div>
+    
+</body>
+</html>

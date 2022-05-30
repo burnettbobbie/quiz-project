@@ -1,0 +1,337 @@
+
+
+h1{
+    font-family: 'Fredoka One', cursive;
+    font-size: 10rem !important;
+    font-weight: 900 !important;
+    color: #ffffff;
+    align-items: center !important;
+    text-align: center !important;
+    background-color:#F4B512;
+    margin-top: -25px;
+    box-shadow: 0px 10px 13px -7px #696666, 5px 5px 15px 5px rgba(0,0,0,0);
+    border-bottom: solid 5px #F4B512 ;
+    text-shadow: 4px 4px 0 #4074b5, 4px -4px 0 #4074b5, -4px 4px 0 #4074b5, -4px -4px 0 #4074b5, 4px 0px 0 #4074b5, 0px 4px 0 #4074b5, -4px 0px 0 #4074b5, 0px -4px 0 #4074b5;
+}
+
+
+h1 > a{
+    text-decoration: none;
+    color: white !important;
+
+}
+
+
+input{
+    height: 4rem;
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-align: center !important;
+    box-shadow: rgba(170, 170, 173, 0.25) 0px 30px 60px -12px inset, rgba(243, 236, 236, 0.3) 0px 18px 36px -18px inset !important;
+    padding: 2% !important;
+    border: none !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+
+input:focus{
+    box-shadow: none !important;
+    border: none !important;
+    
+}
+
+button{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+    background-color: rgb(255, 255, 255) !important;
+    font-size: 1.5rem !important; 
+    text-align: center !important;
+    border-radius: 60px !important;
+    font-weight: 500 !important;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 50% !important;
+    margin: auto !important;
+}
+
+button:hover{
+    color:#4074b5 !important;
+}
+
+button:active{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px inset !important;
+    color:#4074b5 !important;
+}
+
+
+
+#header{
+    background-color: #F4B512;
+    max-height: 10rem !important;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+
+.container{
+    font-family: 'Varela Round', sans-serif;
+}
+
+
+#footer{
+    background-image: url(images/footer2.jpg) !important;
+    background-size: 80%;
+    border-top: solid #4074b5 6px !important;
+    height: 15% !important;
+    
+}
+
+#arrow{
+    height: 20%;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+#arrow:hover{
+  transform: scale(1.5);
+  transition-duration: 0.2s;
+}
+
+#arrow:active{
+    transform: scale(1);
+    transition-duration: 0.2s;
+}
+
+#d{
+    float:right;
+    align-items: center;
+    transform: rotate(-8deg) !important;
+}
+
+
+#datbut{
+    font-size: 0.2rem !important;
+    text-align: right;
+}
+.loginTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+
+#dot{
+    animation: glowingRed 1900ms infinite;
+    border-radius: 50%;
+    height: 9rem;
+    width: 9rem;
+    margin-right: 4rem;
+}
+
+#dotpicRed{
+    animation: glowingRed 1900ms infinite;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    padding: 1rem;
+    border: solid 2px white;
+}
+
+#dotpicGreen{
+    animation: glowingGreen 1900ms infinite;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    padding: 1rem;
+    border: solid 2px white;
+}
+
+
+#det{
+    flex: 1;
+}
+
+#form{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 1%;
+}
+
+#displayCookie{
+    text-transform: capitalize !important;
+}
+
+
+
+.menuContainer{
+    padding: 4%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: grid;  
+    grid-gap: 5%;  
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(5, 200px);  
+}
+
+.menuContainer > div >a> img {  
+    width: 100%;  
+    height: 100%;  
+    object-fit:contain;
+}
+
+.menuContainer > div:hover{
+    transform: scale(1.15);
+}
+
+
+.hide{
+    display: none;
+    font-family:'Varela Round', sans-serif !important;
+    font-weight: 300 !important;
+    font-size:1.1rem;
+    color:#ffffff;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.quizbox{
+    border: solid 0;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.quizbox:hover{
+    background-color:#4075b539;
+
+}
+
+.quizbox:active{
+    box-shadow: inset rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: 0 0 8px rgba(81, 203, 238, 1);
+
+}
+
+.quizbox:hover .hide{
+    display: block;
+}
+
+
+#cornerSymbol{
+    display: flex;
+    max-width: 200px;  
+    height: 200px;
+    float: right;    
+}
+
+.inputq{
+    height: 4rem;
+    font-size: 1.75rem;
+    text-align: center !important;
+    box-shadow: inset 1px 4px 15px 7px #EBEBEB;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset !important;
+    padding: 2% !important;
+    border: none !important;
+}
+
+.inputq:focus{
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.question{
+    font-size: 1.5rem !important;
+}
+
+label{
+    text-align: center;
+    font-size: 1.3rem !important;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold !important;
+    padding: 0.2% !important;
+
+}
+
+
+.radio{
+    padding: 5rem;
+    box-shadow: none !important;
+}
+
+.submit{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+    background-color: rgb(255, 255, 255) !important;
+    font-size: 1.5rem !important;
+    font-family: 'Varela Round', sans-serif;
+    text-align: center !important;
+    border: none;
+}
+
+.submit:hover{
+    color:#4074b5 !important;
+}
+
+.submit:active{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px inset !important;
+    color:#4074b5 !important;
+}
+
+#score{
+    font-size: 2rem !important;
+    float: right;
+    transform: rotate(-6deg);
+}
+
+#o{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20rem;
+}
+@keyframes glowingRed {
+    0% {
+      background-color: #ae3434;
+      box-shadow: 0 0 10px #ae3434;
+    }
+
+
+    50% {
+      background-color: #ff0202;
+      box-shadow: 0 0 20px #ff0202;
+    }
+
+
+    100% {
+      background-color: #ae3434;
+      box-shadow: 0 0 10px #ae3434;
+    }
+  }
+
+@keyframes glowingGreen {
+    0% {
+      background-color: #33a52d;
+      box-shadow: 0 0 10px #33a52d;
+    }
+
+
+    50% {
+      background-color: #33f32c;
+      box-shadow: 0 0 20px #33f32c;
+    }
+
+
+    100% {
+      background-color: #33a52d;
+      box-shadow: 0 0 10px #33a52d;
+    }
+  }

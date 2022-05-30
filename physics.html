@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Quiz</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="JS/quiz.js"></script>
+</head>
+<body onload="DandT()"> 
+    <div data-role="page" data-title="Quiz" data-theme="a"id="frontend">
+        <script>
+            //for loop to display physics questions from array on physics quiz page//
+            $(document).ready(function histQs() {
+             for(let i=0; i <=2; i+=2 )
+         {
+             document.getElementById("pq1").innerHTML= qPhys[0][0];                
+             document.getElementById("pq2").innerHTML= qPhys[1][0];
+             document.getElementById("pq3").innerHTML= qPhys[2][0];
+             document.getElementById("pq4").innerHTML= qPhys[3][0];
+             document.getElementById("pq5").innerHTML= qPhys[4][0];
+         }
+     });
+         </script>
+        <div data-role="header" data-theme="a" id="header">
+            <div>
+            <h1><a href="mainmenu.html">QUIZ</a></h1> <!--Quiz logo links back to main menu-->
+            </div>
+        </div>
+            
+        <div id="content" data-role="content" data-theme="c" class="container">
+    <div><br><br></div>
+        <!--Displays date and time-->
+        <div id="clock"></div>
+         <div class="loginTitle">     
+            <div id="cornerSymbol"><img src="images/physics.png" alt=""></div>
+            <h2>PHYSICS           
+            </h2>
+         </div>  
+
+         <!--location of questions, answers and input boxes on page-->
+         <label for="" id="pq1" class="question"></label>
+         <input class="inputq" type="text" id="pAnsq1">
+         <label id="pq1result"></label>
+
+         <label for="" id="pq2"class="question" onmouseover></label>
+         <input class="inputq" type="text" id="pAnsq2">
+         <label for="" id="pq2result"></label>
+
+         <label for="" id="pq3"class="question"></label>
+         <div style="padding-left: 30%">
+            <!--radio checkboxes-->
+         <input class="radio" type="radio" name="lens" value="convex" id="pAnsq3"> <!--correct answer-->
+         <label for="convex" class="radioLabel">Convex</label>
+         <input class="radio" type="radio" name="lens" value="concave" id="wrong">
+         <label for="concave" class="radioLabel">Concave</label>
+         <input class="radio" type="radio" name="lens" value="plane" id="wrong">
+         <label for="plano" class="radioLabel">Plano Concave</label>
+         </div>
+         <label id="pq3result"></label>
+
+         <label for="" id="pq4"class="question"></label>
+         <input class="inputq" type="text" id="pAnsq4">
+         <label id="pq4result"></label>
+
+         <label for="" id="pq5"class="question"></label>
+         <div style="padding-left: 30%">
+            <!--radio checkboxes-->
+        <input class="radio" type="radio" name="bulb" value="copper" id="wrong">
+        <label for="copper" class="radioLabel">Copper</label>
+        <input class="radio" type="radio" name="bulb" value="iron" id="wrong">
+        <label for="iron" class="radioLabel">Iron</label>
+        <input class="radio" type="radio" name="bulb" value="tungsten" id="pAnsq5"> <!--correct answer-->
+        <label for="tungsten" class="radioLabel">Tungsten</label>
+        <input class="radio" type="radio" name="bulb" value="aluminium" id="wrong">
+        <label for="aluminium" class="radioLabel">Aluminium</label>
+        <input class="radio" type="radio" name="bulb" value="rubidium" id="wrong">
+        <label for="rubidium" class="radioLabel">Rubidium</label>
+        </div>
+         <label id="pq5result"></label>
+        
+         <!--triggers function to check physics answers and display final score-->
+         <button class="submit" onclick="checkP()">SUBMIT ANSWERS</button>
+         <label for="score" id="score"></label>
+    
+        </div>
+
+        <div data-role="footer" data-position="static" id="footer">
+            <div id="arrow"><a href="mainmenu.html"><img src="images/qarrow.png" alt="arrow"></a></div><!--navigational arrow to go back to main menu-->
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon-32x32.png"/>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="JS/quiz.js"></script>
+</head>
+<body onload="getCookie();  DandT()"><!--triggers the cookie function which has been defined based on user input. Displays username based on user input-->
+    <div data-role="page" data-title="Quiz" data-theme="a"id="mainmenu">
+        <div data-role="header" data-theme="a" id="header">
+            <div>
+                <h1>QUIZ</h1>
+            </div>
+        </div>
+            
+    <div id="content" data-role="content" data-theme="c" class="container containerMain" >
+        <div><br><br></div>
+        <div id="clock"></div>
+         <div class="loginTitle">
+                    
+            <div id="dotpicGreen"></div>
+                <h2 id="displayCookie">
+                    <script>
+                    var username = document.cookie.slice(9);         //username starts at the 9th character of the cookie string//
+                    var span = document.getElementById('displayCookie');   
+                    span.innerHTML="-----Welcome, "+ username + "!";        //cookie is placed and displayed with welcome message at the location of the displayCookie ID in the DOM//
+                    </script>
+                </h2>
+            </div>  
+            <div class="menuContainer"> <!--Container with quiz categories and their relevant page links-->
+                <div class="quizbox"><a href="physics.html"><img src="images/physics.png" alt="Particles"><div class="hide">PHYSICS</div></a></div>
+                <div class="quizbox"><a href="maths.html"><img src="images/Abacus.png" alt="Abacus"><div class="hide">MATHS</div></a></div>
+                <div class="quizbox"><a href="geography.html"><img src="images/Geography.png" alt="Globe"><div class="hide">GEOGRAPHY</div></a></div>
+                <div class="quizbox"><a href="history.html"><img src="images/history.png" alt="Historical figure"><div class="hide">HISTORY</div></a></div>
+                <div class="quizbox"><a href="chemistry.html"><img src="images/Chemistry.png" alt="Beakers"><div class="hide">CHEMISTRY</div></a></div>
+            </div>
+           
+            <div id="o"><img src="images/smiley.png"></div>
+            <button id="exit" onclick="exitQuiz();">EXIT</button> <!--button exits user out of quiz main menu and back to login page-->
+            
+        </div>
+        
+
+        <div data-role="footer" data-position="fixed" id="footer" class="removeSpace">
+        </div>
+    </div>
+    
+</body>
+</html>

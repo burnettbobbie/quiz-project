@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maths Quiz</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="JS/quiz.js"></script>
+</head>
+<body onload="DandT()">
+
+    <div data-role="page" data-title="Quiz" data-theme="a"id="frontend" >
+        <script>
+            //for loop to display maths questions from array on maths quiz page//
+            $(document).ready(function mathsQs() {
+        for(let i=0; i <=2; i+=2 )
+        {
+            document.getElementById("mq1").innerHTML= qMaths[0][0];                 
+            document.getElementById("mq2").innerHTML= qMaths[1][0];
+            document.getElementById("mq3").innerHTML= qMaths[2][0];
+            document.getElementById("mq4").innerHTML= qMaths[3][0];
+            document.getElementById("mq5").innerHTML= qMaths[4][0];
+        }
+     });
+    
+         </script>
+        <div data-role="header" data-theme="a" id="header">
+            <div>
+            <h1><a href="mainmenu.html">QUIZ</a></h1> <!--Quiz logo links back to main menu-->
+            </div>
+        </div>
+            
+    <div id="content" data-role="content" data-theme="c" class="container">
+            <div><br><br></div>
+            <!--Displays date and time-->
+            <div id="clock"></div>
+         <div class="loginTitle">
+            <div id="cornerSymbol"><img src="images/Abacus.png" alt=""></div>
+            <h2>MATHS </h2>
+         </div>  
+
+         <!--location of questions, answers and input boxes on page-->
+         <label for="" id="mq1" class="question"></label>
+         <input class="inputq" type="text" id="mAnsq1">
+         <label for="ansq1" id="Mq1result"></label>
+
+         <label for="" id="mq2" class="question" onmouseover="timeout()"></label>></label>
+         <input class="inputq" type="text" id="mAnsq2">
+         <label for="" id="Mq2result"></label>
+
+         <label for="" id="mq3" class="question"></label>
+         <input class="inputq" type="text" id="mAnsq3">
+         <label id="Mq3result"></label>
+
+         <label for="" id="mq4" class="question"></label>
+         <input class="inputq" type="text" id="mAnsq4">
+         <label id="Mq4result"></label>
+
+         <label for="" id="mq5" class="question"></label>
+         <div style="padding-left: 30%;">
+         <input class="inputq" type="checkbox" name="integer" value="naturalNumbers" id="mAnsq51">
+         <label for="naturalNumbers">Natural Numbers</label>
+         <input class="inputq" type="checkbox" name="integer" value="zero" id="mAnsq52">
+         <label for="zero">Zero</label>
+         <input class="inputq" type="checkbox" name="integer" value="negativeNumbers" id="mAnsq53">
+         <label for="negativeNumbers">Negative Numbers</label>
+         </div>
+         <label id="Mq5result"></label>
+       
+         <!--triggers function to check maths answers and display final score-->
+         <button class="submit" onclick="checkM()">SUBMIT ANSWERS</button>
+         <label for="score" id="score"></label>
+        
+    </div>
+
+    <div data-role="footer" data-position="static" id="footer">
+        <div id="arrow"><a href="mainmenu.html"><img src="images/qarrow.png" alt="arrow"></a></div> <!--navigational arrow to go back to main menu-->
+    </div>
+</div>
+    
+</body>
+</html>
